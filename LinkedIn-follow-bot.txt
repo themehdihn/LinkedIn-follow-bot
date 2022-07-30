@@ -1,0 +1,15 @@
+let autofl = document.querySelectorAll(
+  "ul.discover-fluid-entity-list .artdeco-button--2"
+);
+let followIntervalCount = 0;
+const followInterval = setInterval(() => {
+  if (followIntervalCount < 30) {
+    autofl[followIntervalCount].click();
+    followIntervalCount += 1;
+  } else {
+    clearInterval(followInterval);
+    alert("tamam");
+  }
+}, 1000);
+
+// created by @themehdihn
